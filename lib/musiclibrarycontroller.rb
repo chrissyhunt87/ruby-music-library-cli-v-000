@@ -84,6 +84,8 @@ class MusicLibraryController
     list_songs
     puts "Which song number would you like to play?"
     song_number = gets.chomp
+    Songs.all.sort_by {|song| song.name}
+
   end
 
 end
