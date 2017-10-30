@@ -84,7 +84,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     index = gets.chomp.to_i - 1
     sorted_songs = Song.all.sort_by {|song| song.name}
-    if sorted_songs[index]
+    if sorted_songs[index] && index
       puts "Playing #{sorted_songs[index].name} by #{sorted_songs[index].artist.name}"
     end
   end
