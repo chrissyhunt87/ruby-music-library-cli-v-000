@@ -86,7 +86,7 @@ class MusicLibraryController
     song_number = gets.chomp
     index = song_number.to_i - 1
     sorted_songs = Song.all.sort_by {|song| song.name}
-    puts "#{song_number}. #{sorted_songs[song_number-1].artist.name} - #{sorted_songs[song_number-1].name} - #{sorted_songs[song_number-1].genre.name}"
+    puts "#{song_number}. #{sorted_songs[index].artist.name} - #{sorted_songs[index].name} - #{sorted_songs[index].genre.name}"
   end
 
 end
