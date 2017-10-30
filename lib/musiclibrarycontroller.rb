@@ -83,6 +83,7 @@ class MusicLibraryController
   def play_song
     list_songs
     puts "Which song number would you like to play?"
+    gets song_number.chomp
   end
 
 end
