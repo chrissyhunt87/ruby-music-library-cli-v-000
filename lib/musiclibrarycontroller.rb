@@ -61,6 +61,7 @@ class MusicLibraryController
         puts "#{counter}. #{song.name} - #{song.genre.name}"
         counter += 1
       end
+      
     # if artist = nil
     #   self.list_songs_by_artist
     # else
