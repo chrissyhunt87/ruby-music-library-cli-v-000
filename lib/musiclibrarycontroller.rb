@@ -54,11 +54,14 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artist_search = gets.chomp
     artist = Artist.find_by_name(artist_search)
-    counter = 1
-    binding.pry
-    artist.songs.each do |song|
-      puts "#{counter}. #{song.name} - #{song.genre.name}"
-      counter += 1
+    if artist = nil
+      nil
+    else
+      counter = 1
+      artist.songs.each do |song|
+        puts "#{counter}. #{song.name} - #{song.genre.name}"
+        counter += 1
+      end
     end
   end
 
